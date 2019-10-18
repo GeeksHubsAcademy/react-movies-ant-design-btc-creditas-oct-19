@@ -2,6 +2,7 @@ import React from 'react';
 import apiService from '../services/moviesApi.service';
 import { Spin, Alert } from 'antd';
 import styled from 'styled-components';
+import MovieList from '../components/MovieList';
 
 const Wrapper = styled.div`
   padding: 1em;
@@ -66,7 +67,7 @@ class MoviesCategory extends React.Component {
             <Spin size='large' />
           </div>
         ) : (
-          <pre>{JSON.stringify(this.state.movies, null, 2)}</pre>
+           <MovieList movies={this.state.movies}/>
         )}
       </Wrapper>
     );

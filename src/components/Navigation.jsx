@@ -1,31 +1,42 @@
 import React from 'react';
 import { PageHeader, Button } from 'antd';
+import styled from 'styled-components';
+import { NavLink, withRouter } from 'react-router-dom';
 
-import { NavLink , withRouter} from 'react-router-dom';
+
+const Wrapper = styled.div`
+    .active button {
+        background:black;
+        color:white;
+    }
+`
 
 function Navigation(props) {
-    const [title, subtitle] = props.location.pathname.split('/').filter(item => !!item)
+  const path = props.location.pathname;
+  const [title, subtitle] = path.split('/').filter(item => !!item);
 
   return (
-    <div className='Navigation'>
+    <Wrapper className='Navigation'>
       <PageHeader
         ghost={false}
         onBack={() => props.history.goBack()}
         title={title}
         subTitle={subtitle.replace('_', ' ')}
         extra={[
-          <Button key='3'>
-            <NavLink to='/category/top_rated'>Top rated</NavLink>
-          </Button>,
-          <Button key='2'>
-            <NavLink to='/category/upcoming'>Upcoming</NavLink>
-          </Button>,
-          <Button key='1' type='primary'>
-            <NavLink to='/category/popular'>Popular</NavLink>
-          </Button>,
+          <NavLink to='/category/top_rated' activeClassName='active'>
+            <Button key='3'>Top rated</Button>
+          </NavLink>,
+          <NavLink to='/category/upcoming' activeClassName='active'>
+            <Button key='2'>Upcoming</Button>
+          </NavLink>,
+          <NavLink to='/category/popular' activeClassName='active'>
+            <Button key='1'>
+              Popular
+            </Button>
+          </NavLink>,
         ]}
       ></PageHeader>
-    </div>
+    </Wrapper>
   );
 }
 

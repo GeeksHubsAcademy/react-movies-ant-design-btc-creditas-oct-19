@@ -5,14 +5,12 @@ class MoviesCategory extends React.Component {
     movies: [],
     currentCategory: '',
   };
-
-  componentDidMount() {
-    this.getMovies();
+  constructor(p) {
+    super(p);
+    this.componentDidMount = this.getMovies;
+    this.componentDidUpdate = this.getMovies
   }
 
-  componentDidUpdate() {
-    this.getMovies();
-  }
 
   getMovies() {
     const currentCategory = this.props.match.params.categoryName;

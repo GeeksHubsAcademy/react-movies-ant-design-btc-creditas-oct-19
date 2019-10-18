@@ -1,19 +1,33 @@
 import React from 'react';
+import { PageHeader, Button } from 'antd';
 
+import { NavLink , withRouter} from 'react-router-dom';
 
-import {NavLink} from 'react-router-dom'
+function Navigation(props) {
+    console.log(props);
+    const [title, subtitle] = props.location.pathname.split('/').filter(item => !!item)
 
-
-
-
-function Navigation () {
-    return (
-      <div className='Navigation'>
-        <NavLink to='/category/top_rated' >Top rated</NavLink>
-        <NavLink to='/category/upcoming' >Upcoming</NavLink>
-        <NavLink to='/category/popular' >Popular</NavLink>
-      </div>
-    );
+  return (
+    <div className='Navigation'>
+      <PageHeader
+        ghost={false}
+        onBack={() => props.history.goBack()}
+        title={title}
+        subTitle={subtitle.replace('_', ' ')}
+        extra={[
+          <Button key='3'>
+            <NavLink to='/category/top_rated'>Top rated</NavLink>
+          </Button>,
+          <Button key='2'>
+            <NavLink to='/category/upcoming'>Upcoming</NavLink>
+          </Button>,
+          <Button key='1' type='primary'>
+            <NavLink to='/category/popular'>Popular</NavLink>
+          </Button>,
+        ]}
+      ></PageHeader>
+    </div>
+  );
 }
 
-export default Navigation;
+export default withRouter(Navigation);

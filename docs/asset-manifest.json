@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/react-movies-ant-design-btc-creditas-oct-19/static/css/main.0e324354.chunk.css",
+    "main.js": "/react-movies-ant-design-btc-creditas-oct-19/static/js/main.5664b556.chunk.js",
+    "main.js.map": "/react-movies-ant-design-btc-creditas-oct-19/static/js/main.5664b556.chunk.js.map",
+    "runtime-main.js": "/react-movies-ant-design-btc-creditas-oct-19/static/js/runtime-main.3ef56056.js",
+    "runtime-main.js.map": "/react-movies-ant-design-btc-creditas-oct-19/static/js/runtime-main.3ef56056.js.map",
+    "static/css/2.6547dd70.chunk.css": "/react-movies-ant-design-btc-creditas-oct-19/static/css/2.6547dd70.chunk.css",
+    "static/js/2.3ae76d08.chunk.js": "/react-movies-ant-design-btc-creditas-oct-19/static/js/2.3ae76d08.chunk.js",
+    "static/js/2.3ae76d08.chunk.js.map": "/react-movies-ant-design-btc-creditas-oct-19/static/js/2.3ae76d08.chunk.js.map",
+    "index.html": "/react-movies-ant-design-btc-creditas-oct-19/index.html",
+    "precache-manifest.14cf1b7d491f081fd36cca1fa25e6414.js": "/react-movies-ant-design-btc-creditas-oct-19/precache-manifest.14cf1b7d491f081fd36cca1fa25e6414.js",
+    "service-worker.js": "/react-movies-ant-design-btc-creditas-oct-19/service-worker.js",
+    "static/css/2.6547dd70.chunk.css.map": "/react-movies-ant-design-btc-creditas-oct-19/static/css/2.6547dd70.chunk.css.map",
+    "static/css/main.0e324354.chunk.css.map": "/react-movies-ant-design-btc-creditas-oct-19/static/css/main.0e324354.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3ef56056.js",
+    "static/css/2.6547dd70.chunk.css",
+    "static/js/2.3ae76d08.chunk.js",
+    "static/css/main.0e324354.chunk.css",
+    "static/js/main.5664b556.chunk.js"
+  ]
+}

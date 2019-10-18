@@ -4,7 +4,6 @@ import { PageHeader, Button } from 'antd';
 import { NavLink , withRouter} from 'react-router-dom';
 
 function Navigation(props) {
-    console.log(props);
     const [title, subtitle] = props.location.pathname.split('/').filter(item => !!item)
 
   return (

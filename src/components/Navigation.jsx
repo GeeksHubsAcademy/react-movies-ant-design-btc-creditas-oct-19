@@ -17,7 +17,7 @@ const Wrapper = styled.div`
 
 function Navigation(props) {
   const path = props.location.pathname;
-  const [title, subtitle] = path.split('/').filter(item => !!item);
+  const [title = '', subtitle = ''] = path.split('/').filter(item => !!item);
 
   return (
     <Wrapper className='Navigation'>

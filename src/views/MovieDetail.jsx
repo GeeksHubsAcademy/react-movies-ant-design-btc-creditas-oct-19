@@ -114,7 +114,7 @@ class MovieDetail extends React.Component {
                     size={44}
                     style={{ background: 'white', marginRight: 10 }}
                     shape='square'
-                    src={'https://image.tmdb.org/t/p/w200/' + comp.logo_path}
+                    src={'https://image.tmdb.org/t/p/w200/' + comp.logo_path }
                   ></Avatar>
                 ),
             )}

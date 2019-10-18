@@ -6,7 +6,7 @@ class ApiService {
     this.callsDone = 0;
   }
 
-  async getMoviesByCatergory(category, page = 1) {
+  async getMoviesByCategory(category, page = 1) {
     this.callsDone++;
 
     const { data } = await axios.get(

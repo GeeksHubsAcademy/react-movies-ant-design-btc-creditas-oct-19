@@ -17,7 +17,7 @@ class MoviesCategory extends React.Component {
   getMovies() {
     const currentCategory = this.props.match.params.categoryName;
     if (currentCategory !== this.state.currentCategory) {
-      apiService.getMoviesByCatergory(currentCategory).then(data => {
+      apiService.getMoviesByCategory(currentCategory).then(data => {
         this.setState({ movies: data.results, currentCategory });
       });
     }

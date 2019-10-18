@@ -1,14 +1,17 @@
 import React from 'react';
 import './App.css';
-import {BrowserRouter, Switch, Route, Redirect} from 'react-router-dom'
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import NotFound from './views/NotFound';
 import MoviesCategory from './views/MoviesCategory';
 import MovieDetail from './views/MovieDetail';
+import Navigation from './components/Navigation';
 
 function App() {
   return (
     <div className='App'>
       <BrowserRouter>
+        <Navigation />
+
         <Switch>
           <Route
             path='/category/:categoryName'

@@ -1,0 +1,12 @@
+@apikey =323112ea2281b9eb70f319f4df422c6b
+GET https://api.themoviedb.org/3/movie/popular?api_key={{apikey}}&language=es-ES&page=1
+
+###
+
+GET https://api.themoviedb.org/3/movie/top_rated?api_key={{apikey}}&language=es-ES&page=1
+
+
+
+###
+
+GET https://api.themoviedb.org/3/movie/upcoming?api_key={{apikey}}&language=es-ES&page=1

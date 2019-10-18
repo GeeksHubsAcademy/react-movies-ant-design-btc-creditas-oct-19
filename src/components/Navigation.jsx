@@ -23,16 +23,14 @@ function Navigation(props) {
         title={title}
         subTitle={subtitle.replace('_', ' ')}
         extra={[
-          <NavLink to='/category/top_rated' activeClassName='active'>
-            <Button key='3'>Top rated</Button>
+          <NavLink key='3' to='/category/top_rated' activeClassName='active'>
+            <Button>Top rated</Button>
           </NavLink>,
-          <NavLink to='/category/upcoming' activeClassName='active'>
-            <Button key='2'>Upcoming</Button>
+          <NavLink key='2' to='/category/upcoming' activeClassName='active'>
+            <Button>Upcoming</Button>
           </NavLink>,
-          <NavLink to='/category/popular' activeClassName='active'>
-            <Button key='1'>
-              Popular
-            </Button>
+          <NavLink key='1' to='/category/popular' activeClassName='active'>
+            <Button>Popular</Button>
           </NavLink>,
         ]}
       ></PageHeader>

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Card } from 'antd';
+import {Link} from 'react-router-dom';
 const { Meta } = Card;
 
 const Grid = styled.div`
@@ -8,7 +9,7 @@ const Grid = styled.div`
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 0.6em;
     * {
-        color:white!important;
+        color:white;
     }
 `
 
@@ -25,22 +26,24 @@ function MovieList({movies}) {
     return (
       <Grid className='MovieList'>
         {movies.map(movie => (
-          <Card
-            key={movie.id}
-            hoverable
-            bordered={false}
-            bodyStyle={{
-              background: '#222',
-              color: 'white',
-            }}
-            cover={
-              <Img
-                src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
-              />
-            }
-          >
-            <Meta title={movie.title} description={movie.release_date} />
-          </Card>
+          <Link  to={'/movie/' + movie.id}>
+            <Card
+              key={movie.id}
+              hoverable
+              bordered={false}
+              bodyStyle={{
+                background: '#222',
+                color: 'white',
+              }}
+              cover={
+                <Img
+                  src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
+                />
+              }
+            >
+              <Meta title={movie.title} description={movie.release_date} />
+            </Card>
+          </Link>
         ))}
       </Grid>
     );

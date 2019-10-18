@@ -15,6 +15,13 @@ class ApiService {
     return data;
   }
 
+  async getMovieById(id) {
+    const { data } = await axios.get(
+      `https://api.themoviedb.org/3/movie/${id}?api_key=${this.APIKEY}&language=es-ES`,
+    );
+    return data;
+  }
+
   howManyCalls() {
     return this.callsDone;
   }

@@ -22,3 +22,8 @@ h6 {
     color: inherit;
     font-weight: initial;
 }
+
+
+[class*="ant"]:not([class*="rate"]) {
+  color:inherit ;
+}

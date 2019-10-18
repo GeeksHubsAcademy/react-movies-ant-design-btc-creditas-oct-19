@@ -5,9 +5,13 @@ import { NavLink, withRouter } from 'react-router-dom';
 
 
 const Wrapper = styled.div`
+    color: black;
     .active button {
         background:black;
         color:white;
+    }
+    a.active {
+      color:white;
     }
 `
 
